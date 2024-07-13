@@ -44,11 +44,18 @@ class GPIO
          * @param state The state to set (0 for off, 1 for on).
          */
         void setLed2(int state);
+        /**
+         * @brief Checks if the GPIO object is valid.
+         * 
+         * @return true if the GPIO object is valid, false otherwise.
+         */
+        bool isValid() { return is_initialized; }
 
     private:
         int fd; ///< The file descriptor for the GPIO device.
         struct gpiohandle_request leds; ///< The GPIO handle request structure.
         struct gpiohandle_data led_state; ///< The GPIO handle data structure.
+        bool is_initialized; // Tracks whether GPIO initialization was successful
 };
 
 
