@@ -5,7 +5,7 @@
 
 This is a simple "Hello World" kernel module for demonstration purposes.
 
-![alt text](image-1.png)
+![alt text](image.png)
 
 ## Table of Contents
 
